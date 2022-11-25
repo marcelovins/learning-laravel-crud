@@ -9,10 +9,16 @@ class TestesController extends Controller
 {
 
 
-    public function index() { 
-
-        return "cheguei aqui";
-        
+    public function __construct(User $user)
+    {
+        $this->model = $user;
     }
+
+    public function index(Request $request) {
+
+        $uri = $request->sear;
+        return dd($uri);
+    }
+
 
 }

@@ -40,7 +40,7 @@ class UserController extends Controller
     public function update(Request $request) { 
 
 
-        User::findOrFail($request->id)->update($request->only('name', 'email'));
+        User::findOrFail($request->id)->update($request->all());
 
         return redirect()->route('user.index');
     }
@@ -69,3 +69,5 @@ class UserController extends Controller
 
     
 }
+
+// postaman para APIs, ajuda a simular APIs

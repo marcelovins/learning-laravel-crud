@@ -29,7 +29,7 @@
                                         <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <button type="submit" class="btn btn-warning">Delete</button>
                                         </form>    
                                     </td>
                                     <td>
